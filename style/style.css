@@ -1,0 +1,184 @@
+@import url(/style/colors.css);
+@import url(/style/fonts.css);
+
+/* Reset all default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global style */
+body {
+    font-family: var(--barlow-semi-condensed);
+    font-style: var(--normal);
+    background-color: var(--light-grayish-blue);
+}
+
+/* Testimonials container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4.4rem;
+    margin-bottom: 4.4rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.main-container .card:first-child {
+    background-color: var(--moderate-violet);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: right 1.25rem;
+}
+
+.main-container .card:nth-child(2) {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.main-container .card:nth-child(3) {
+    background-color: var(--white);
+}
+
+.main-container .card:nth-child(4) {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.main-container .card:nth-child(5) {
+    background-color: var(--white);
+}
+
+
+/* Component style */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--white);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.person-image {
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.daniel-image, .patrick-image {
+    border: 2px solid hsl(264, 82%, 70%);
+}
+
+.person-name {
+    font-weight: var(--medium);
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+}
+
+.daniel, .jonathan, .patrick {
+    color: var(--white);
+}
+
+.jeanette, .kira {
+    color: var(--very-dark-grayish-blue);
+}
+
+.person-status {
+    font-weight: var(--medium);
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    color: var(--white);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.status-jeanette, .status-kira {
+    color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-recension {
+    font-weight: var(--semi-bold);
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.daniel-recension {
+    padding-bottom: 2rem;
+}
+
+.jonathan-recension, .patrick-recension, .kira-recension, .jeanette-recension {
+    padding-bottom: 1.5rem;
+}
+
+.daniel-recension, .jonathan-recension, .patrick-recension {
+    color: var(--white);
+}
+
+.kira-recension, .jeanette-recension {
+    color: var(--very-dark-grayish-blue);
+}
+
+.testimonial-experience {
+    font-weight: var(--medium);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: var(--light-gray);
+    mix-blend-mode: normal;
+    opacity: 0.7;
+}
+
+.jeanette-experience, .kira-experience {
+    color: var(--very-dark-grayish-blue);
+}
+
+/* Style for all screens wider than 75 rems */
+@media screen and (min-width: 75rem) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .main-container {
+        margin: 10rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .main-container .card:first-child {
+        grid-column: 1 / 3;
+    }
+    
+    .main-container .card:nth-child(2) {
+        background-color: var(--very-dark-grayish-blue);
+    }
+    
+    .main-container .card:nth-child(3) {
+        grid-column: 1;
+    }
+    
+    .main-container .card:nth-child(4) {
+        grid-column: 2 / -2;
+    }
+    
+    .main-container .card:nth-child(5) {
+       grid-column: 4;
+       grid-row: 1 / -1;
+    }    
+}
