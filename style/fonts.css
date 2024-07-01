@@ -1,0 +1,9 @@
+:root {
+    /* Font family  */
+    --barlow-semi-condensed: 'Barlow Semi Condensed', sans-serif;
+    /* Font weights */
+    --medium: 500;
+    --semi-bold: 600;
+    /* Font style */
+    --normal: normal;
+}
